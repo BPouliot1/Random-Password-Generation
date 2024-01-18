@@ -14,15 +14,18 @@ function writePassword(password) {
   passwordText.value = password;
 }
 function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
-  var passwordLength = prompt("Please insert password between 8-128");
-  if(passwordLength < 8) {
-    alert("Password too short");
-    return;
+  var passwordLength = window.prompt("Please insert password length between 8-128");
+  if(typeof passwordLength === "number") {
   }
-  if(passwordLength > 128) {
-    alert("Password too long");
-    return;
-  }
+    if(passwordLength < 8 || passwordLength > 128) {
+  passwordLength = 8;
+  window.alert("no acceptable number chosen, using default number");
+    } else {
+      var passwordLength = passwordLengthInput;
+      return;
+    }
+  
+
 
 var upperCase = window.confirm("Would you like use Uppercase letters");
 if(upperCase) {
@@ -59,3 +62,4 @@ generateBtn.addEventListener("click", writePassword,);
 
 writePassword(password);
 console.log("Write password: ${password}");
+
