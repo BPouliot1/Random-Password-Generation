@@ -24,7 +24,14 @@ function generatePassword(){
       var passwordLength = passwordLengthInput;
       return;
     }
-  
+    console.log("user selection = " + userSelection);
+    if (userSelection.length === 0)
+    return;
+    
+      for(let i = 0; i < length; i ++){
+        var randomIndex = Math.floor(Math.random() * userSelection);
+        var random = userSelection.charAt(randomIndex);
+      }
 generateBtn.addEventListener("click", writePassword,);
 
   writePassword(password);
