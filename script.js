@@ -1,4 +1,4 @@
-// Assignment Code
+//Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -24,21 +24,21 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
     return;
   }
 
-var upperCase = window.prompt("Would you like use Uppercase letters");
+var upperCase = window.confirm("Would you like use Uppercase letters");
 if(upperCase) {
   userSelection.push(upperCase);
 }
-var lowerCase = window.prompt("Would you like use Lowercase letters");
+var lowerCase = window.confirm("Would you like use Lowercase letters");
 if(lowerCase) {
   userSelection.push(lowerCase);
 }
 
-var numbers = window.prompt("Would you like to use Numbers");
+var numbers = window.confirm("Would you like to use Numbers");
 if(numbers) {
   userSelection.push(numbers);
 }
 
-var symbols = window.prompt("Would you like to use Symbols");
+var symbols = window.confirm("Would you like to use Symbols");
 if(symbols) {
   userSelection.push(symbols);
 }
@@ -59,4 +59,3 @@ generateBtn.addEventListener("click", writePassword,);
 
 writePassword(password);
 console.log("Write password: ${password}");
-
