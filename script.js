@@ -13,7 +13,7 @@ function writePassword(password) {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
+function generatePassword(){
   var passwordLength = window.prompt("Please insert password length between 8-128");
   if(typeof passwordLength === "number") {
   }
@@ -55,13 +55,4 @@ if(symbols) {
   window.alert("Symbols included");
 }else{
   window.alert("Symbols not included");
-}
-
-console.log("user selection = " + userSelection);
-if (userSelection.length === 0)
-return;
-
-  for(let i = 0; i < length; i ++){
-    var randomIndex = Math.floor(Math.random() * userSelection);
-    var random = userSelection.charAt(randomIndex);
-  }}
+}}
