@@ -25,25 +25,36 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
       return;
     }
   
+generateBtn.addEventListener("click", writePassword,);
 
+  writePassword(password);
+  console.log("Write password: ${password}");
 
-var upperCase = window.confirm("Would you like use Uppercase letters");
+var upperCase = window.confirm("Use Uppercase letters");
 if(upperCase) {
-  userSelection.push(upperCase);
+  window.alert("Uppercase letters included");
+}else{
+  window.alert("Uppercase letters not included");
 }
-var lowerCase = window.confirm("Would you like use Lowercase letters");
+var lowerCase = window.confirm("Use Lowercase letters");
 if(lowerCase) {
-  userSelection.push(lowerCase);
+  window.alert("Lowercase letters included");
+}else{
+  window.alert("Lowercase letters not included");
 }
 
-var numbers = window.confirm("Would you like to use Numbers");
+var numbers = window.confirm("Use Numbers");
 if(numbers) {
-  userSelection.push(numbers);
+  window.alert("Numbers included");
+}else{
+  window.alert("Numbers not included");
 }
 
-var symbols = window.confirm("Would you like to use Symbols");
+var symbols = window.confirm("Use Symbols");
 if(symbols) {
-  userSelection.push(symbols);
+  window.alert("Symbols included");
+}else{
+  window.alert("Symbols not included");
 }
 
 console.log("user selection = " + userSelection);
@@ -53,13 +64,4 @@ return;
   for(let i = 0; i < length; i ++){
     var randomIndex = Math.floor(Math.random() * userSelection);
     var random = userSelection.charAt(randomIndex);
-  }
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword,);
-
-writePassword(password);
-console.log("Write password: ${password}");
-
+  }}
